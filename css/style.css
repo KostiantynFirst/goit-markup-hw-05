@@ -333,8 +333,12 @@ body {
     position: relative;
 }
 
+.jobs img {
+    display: block;
+}
+
 .thumb {
-    height: 294px;
+    /* height: 294px; */
     position: relative;
 }
 
@@ -419,6 +423,8 @@ body {
     line-height: 1.9;
     letter-spacing: 0.06em;
     text-align: center;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn {
@@ -454,7 +460,6 @@ body {
 .button.secondary:hover,
 .button.secondary:focus {
     color: var(--secondary-text-color);
-    background-color: var(--accent-color);
     background-color: var(--accent-color);
 }
 
@@ -522,10 +527,8 @@ body {
 .portfolio-item img {
     display: block;
 }
-.portfolio-list-item:hover .portfolio-img-text {
-    opacity: .9;
-}
 
+.portfolio-item:hover .portfolio-img-text,
 .portfolio-item:focus .portfolio-img-text {
     opacity: .9;
 }
