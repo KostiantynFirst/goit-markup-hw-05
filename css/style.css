@@ -122,6 +122,8 @@ body {
     text-decoration: none;
     padding-top: 33px;
     padding-bottom: 31px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -197,6 +199,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link:hover,
@@ -488,6 +492,7 @@ body {
 
 .portfolio-list-item {
     flex-basis: calc((100% - 60px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:not(:nth-child(3n)) {
@@ -509,6 +514,7 @@ body {
 
 .portfolio-img {
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-img-text {
@@ -519,9 +525,9 @@ body {
     color: var(--secondary-text-color);
     background-color: var(--accent-color);
     position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+    top: 100%;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item img {
@@ -531,6 +537,7 @@ body {
 .portfolio-item:hover .portfolio-img-text,
 .portfolio-item:focus .portfolio-img-text {
     opacity: .9;
+    transform: translateY(-100%);
 }
 
 
@@ -576,6 +583,8 @@ body {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     text-decoration: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -584,6 +593,8 @@ body {
     height: 60px;
     text-align: center;
     fill: currentColor;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover .clients-icon,
@@ -675,12 +686,16 @@ body {
     border: 1px solid transparent;
     border-radius: 50%;
     color: var(--icon-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-icon {
     display: block;
     text-align: center;
     fill: currentColor;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-link:hover .social-media-icon,
