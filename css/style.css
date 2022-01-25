@@ -529,7 +529,6 @@ body {
     color: var(--secondary-text-color);
     background-color: var(--accent-color);
     opacity: 1;
-    pointer-events: none;
     transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
 
