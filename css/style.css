@@ -317,6 +317,33 @@ body {
     margin-right: 30px;
 }
 
+.jobs-img {
+    position: relative;
+}
+
+.thumb {
+    height: 294px;
+    position: relative;
+}
+
+.jobs-text {
+    width: 100%;
+    margin: 0;
+    padding-left: 83px;
+    padding-right: 82px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    white-space: nowrap;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    bottom: 0;
+}
+
 /* Person-list */
 
 .workers {
@@ -463,9 +490,34 @@ body {
     text-decoration: none;
 }
 
+.portfolio-img {
+    position: relative;
+}
+
+.portfolio-img-text {
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-item img {
     display: block;
 }
+.portfolio-list-item:hover .portfolio-img-text {
+    opacity: .9;
+}
+
+.portfolio-item:focus .portfolio-img-text {
+    opacity: .9;
+}
+
 
 .potrfolio-container {
     padding: 24px 20px;
@@ -644,4 +696,56 @@ body {
 .social-media-link.bottom:hover,
 .social-media-link.bottom:focus {
     background-color: var(--accent-color);
+}
+
+
+/* Backdrop */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background: var(--secondary-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-close {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    margin-right: 22px;
+    margin-top: 11px;
+
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+
+    border: none;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: var(--secondary-text-color);;
 }
